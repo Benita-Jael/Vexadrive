@@ -47,6 +47,20 @@ namespace VexaDrive.Api.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000001",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000002",
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -137,6 +151,24 @@ namespace VexaDrive.Api.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000003",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "STATIC-CONCURRENCY-STAMP",
+                            Email = "admin@vexadrive.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@VEXADRIVE.COM",
+                            NormalizedUserName = "ADMIN@VEXADRIVE.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEB4x+LWMreo4yjc3W0Ur0bRgIgKWwutEO0yeNI6bE1I5uk1F+P3gIJtFcK6B2qocDA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "STATIC-SECURITY-STAMP",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@vexadrive.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -199,6 +231,13 @@ namespace VexaDrive.Api.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "00000000-0000-0000-0000-000000000003",
+                            RoleId = "00000000-0000-0000-0000-000000000001"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -220,63 +259,121 @@ namespace VexaDrive.Api.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("VexaDriveAPI.Models.Owner", b =>
+            modelBuilder.Entity("VexaDriveAPI.Models.Bill", b =>
                 {
-                    b.Property<int>("OwnerId")
+                    b.Property<int>("BillId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OwnerId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BillId"));
 
-                    b.Property<string>("ContactNumber")
+                    b.Property<string>("ContentType")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("FileName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FirstName")
+                    b.Property<int>("ServiceRequestId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StoragePath")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LastName")
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("BillId");
+
+                    b.HasIndex("ServiceRequestId")
+                        .IsUnique();
+
+                    b.ToTable("Bills");
+                });
+
+            modelBuilder.Entity("VexaDriveAPI.Models.Notification", b =>
+                {
+                    b.Property<int>("NotificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("OwnerId");
+                    b.Property<int>("ServiceRequestId")
+                        .HasColumnType("int");
 
-                    b.ToTable("Owners");
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasData(
-                        new
-                        {
-                            OwnerId = 1,
-                            ContactNumber = "9876543210",
-                            Email = "john.doe@example.com",
-                            FirstName = "John",
-                            LastName = "Doe"
-                        },
-                        new
-                        {
-                            OwnerId = 2,
-                            ContactNumber = "9753108642",
-                            Email = "emma.smith@example.com",
-                            FirstName = "Emma",
-                            LastName = "Smith"
-                        },
-                        new
-                        {
-                            OwnerId = 3,
-                            ContactNumber = "9898989898",
-                            Email = "raj.kumar@example.com",
-                            FirstName = "Raj",
-                            LastName = "Kumar"
-                        });
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("NotificationId");
+
+                    b.HasIndex("ServiceRequestId");
+
+                    b.ToTable("Notifications");
+                });
+
+            modelBuilder.Entity("VexaDriveAPI.Models.ServiceRequest", b =>
+                {
+                    b.Property<int>("ServiceRequestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServiceRequestId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EstimatedDeliveryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ProblemDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ServiceAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ServiceDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VehicleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ServiceRequestId");
+
+                    b.HasIndex("VehicleId");
+
+                    b.HasIndex("Status", "CreatedAt");
+
+                    b.ToTable("ServiceRequests");
                 });
 
             modelBuilder.Entity("VexaDriveAPI.Models.Vehicle", b =>
@@ -292,6 +389,10 @@ namespace VexaDrive.Api.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("CustomerUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -302,9 +403,6 @@ namespace VexaDrive.Api.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("OwnerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -312,38 +410,10 @@ namespace VexaDrive.Api.Migrations
 
                     b.HasKey("VehicleId");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("NumberPlate")
+                        .IsUnique();
 
                     b.ToTable("Vehicles");
-
-                    b.HasData(
-                        new
-                        {
-                            VehicleId = 1,
-                            Color = "",
-                            Model = "Honda City",
-                            NumberPlate = "TN10AB1234",
-                            OwnerId = 1,
-                            Type = "Car"
-                        },
-                        new
-                        {
-                            VehicleId = 2,
-                            Color = "",
-                            Model = "Yamaha FZ",
-                            NumberPlate = "TN22CD5678",
-                            OwnerId = 2,
-                            Type = "Bike"
-                        },
-                        new
-                        {
-                            VehicleId = 3,
-                            Color = "",
-                            Model = "Hyundai i20",
-                            NumberPlate = "TN05EF9898",
-                            OwnerId = 3,
-                            Type = "Car"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -397,18 +467,50 @@ namespace VexaDrive.Api.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("VexaDriveAPI.Models.Vehicle", b =>
+            modelBuilder.Entity("VexaDriveAPI.Models.Bill", b =>
                 {
-                    b.HasOne("VexaDriveAPI.Models.Owner", "Owner")
-                        .WithMany("Vehicles")
-                        .HasForeignKey("OwnerId");
+                    b.HasOne("VexaDriveAPI.Models.ServiceRequest", "ServiceRequest")
+                        .WithOne("Bill")
+                        .HasForeignKey("VexaDriveAPI.Models.Bill", "ServiceRequestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Owner");
+                    b.Navigation("ServiceRequest");
                 });
 
-            modelBuilder.Entity("VexaDriveAPI.Models.Owner", b =>
+            modelBuilder.Entity("VexaDriveAPI.Models.Notification", b =>
                 {
-                    b.Navigation("Vehicles");
+                    b.HasOne("VexaDriveAPI.Models.ServiceRequest", "ServiceRequest")
+                        .WithMany("Notifications")
+                        .HasForeignKey("ServiceRequestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ServiceRequest");
+                });
+
+            modelBuilder.Entity("VexaDriveAPI.Models.ServiceRequest", b =>
+                {
+                    b.HasOne("VexaDriveAPI.Models.Vehicle", "Vehicle")
+                        .WithMany("ServiceRequests")
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Vehicle");
+                });
+
+            modelBuilder.Entity("VexaDriveAPI.Models.ServiceRequest", b =>
+                {
+                    b.Navigation("Bill")
+                        .IsRequired();
+
+                    b.Navigation("Notifications");
+                });
+
+            modelBuilder.Entity("VexaDriveAPI.Models.Vehicle", b =>
+                {
+                    b.Navigation("ServiceRequests");
                 });
 #pragma warning restore 612, 618
         }

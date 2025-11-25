@@ -171,3 +171,4 @@ C:\Users\2416649\Downloads\VexaDrive\VexaDrive.Api\VexaDrive.Api\obj\Debug\net9.
 C:\Users\2416649\Downloads\VexaDrive\VexaDrive.Api\VexaDrive.Api\obj\Debug\net9.0\VexaDrive.Api.pdb
 C:\Users\2416649\Downloads\VexaDrive\VexaDrive.Api\VexaDrive.Api\obj\Debug\net9.0\VexaDrive.Api.genruntimeconfig.cache
 C:\Users\2416649\Downloads\VexaDrive\VexaDrive.Api\VexaDrive.Api\obj\Debug\net9.0\ref\VexaDrive.Api.dll
+C:\Users\2416649\Downloads\VexaDrive\VexaDrive.Api\VexaDrive.Api\obj\Debug\net9.0\VexaDrive.Api.sourcelink.json

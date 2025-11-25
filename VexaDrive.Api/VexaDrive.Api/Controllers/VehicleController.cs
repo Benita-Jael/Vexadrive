@@ -1,149 +1,125 @@
 using AutoMapper;
-
 using Microsoft.AspNetCore.Authorization;
-
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
+using VexaDriveAPI.Context;
 using VexaDriveAPI.DTO.VehicleDTO;
+using VexaDriveAPI.Models;
 
-using VexaDriveAPI.Repository.VehicleServices;
- 
 namespace VexaDriveAPI.Controllers
-
 {
-
-    [Authorize]
-
     [ApiController]
-
     [Route("api/[controller]")]
-
     public class VehicleController : ControllerBase
-
     {
-
-        private readonly IVehicleRepository _repository;
-
+        private readonly VexaDriveDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly IMapper _mapper;
- 
-        public VehicleController(IVehicleRepository repository, IMapper mapper)
 
+        public VehicleController(VexaDriveDbContext context, UserManager<IdentityUser> userManager, IMapper mapper)
         {
-
-            _repository = repository;
-
+            _context = context;
+            _userManager = userManager;
             _mapper = mapper;
-
         }
- 
-        [HttpPost("addVehicle")]
 
-        public async Task<IActionResult> CreateVehicleAsync(VehicleCreateDTO vehicleCreateDTO)
-
+        // POST: api/vehicle/add
+        [Authorize(Roles = "Customer")]
+        [HttpPost("add")]
+        public async Task<IActionResult> AddVehicle([FromBody] VehicleCreateDTO dto)
         {
+            var userId = _userManager.GetUserId(User);
+            if (userId == null) return Unauthorized();
 
-            if (!ModelState.IsValid)
+            var vehicle = new Vehicle
+            {
+                Model = dto.Model,
+                NumberPlate = dto.NumberPlate,
+                Type = dto.Type,
+                Color = dto.Color,
+                CustomerUserId = userId   // ✅ set ownership
+            };
 
-                return BadRequest(ModelState);
- 
-            var vehicle = await _repository.CreateVehicleAsync(vehicleCreateDTO);
+            _context.Vehicles.Add(vehicle);
+            await _context.SaveChangesAsync();
 
-            if (vehicle == null) return StatusCode(500, "Vehicle creation failed.");
- 
-            var result = _mapper.Map<VehicleDetailsDTO>(vehicle);
-
-            return Ok(result);
-
+            return Ok(_mapper.Map<VehicleDetailsDTO>(vehicle));
         }
- 
-        [HttpPut("updateVehicle/{id}")]
 
-        public async Task<IActionResult> UpdateVehicleAsync(int id, VehicleUpdateDTO updateDTO)
-
+        // PUT: api/vehicle/update/{id}
+        [Authorize(Roles = "Customer")]
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> UpdateVehicle(int id, [FromBody] VehicleUpdateDTO dto)
         {
+            var userId = _userManager.GetUserId(User);
+            if (userId == null) return Unauthorized();
 
-            if (id != updateDTO.VehicleId)
+            var vehicle = await _context.Vehicles
+                .FirstOrDefaultAsync(v => v.VehicleId == id && v.CustomerUserId == userId);
+            if (vehicle == null) return NotFound();
 
-                return BadRequest($"Vehicle ID mismatch: URL ID ({id}) does not match body ID ({updateDTO.VehicleId})");
- 
-            var updated = await _repository.UpdateVehicleAsync(updateDTO);
+            vehicle.Model = dto.Model;
+            vehicle.NumberPlate = dto.NumberPlate;
+            vehicle.Type = dto.Type;
+            vehicle.Color = dto.Color;
 
-            if (!updated) return NotFound("Vehicle not found.");
- 
+            await _context.SaveChangesAsync();
             return Ok("Vehicle updated successfully.");
-
         }
 
-        [HttpGet("searchVehicle")]
-public async Task<ActionResult<IEnumerable<VehicleListDTO>>> SearchVehicles(
-    int? id,
-    string? model,
-    string? numberPlate,
-    string? type,
-    string? color,
-    int? ownerId)
-{
-    var vehicles = await _repository.SearchVehiclesAsync(id, model, numberPlate, type, color, ownerId);
-    return Ok(vehicles);
-}
-
- 
-        [HttpDelete("deleteVehicle/{id}")]
-
-        public async Task<IActionResult> DeleteVehicleAsync(int id)
-
+        // DELETE: api/vehicle/delete/{id}
+        [Authorize(Roles = "Customer")]
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteVehicle(int id)
         {
+            var userId = _userManager.GetUserId(User);
+            if (userId == null) return Unauthorized();
 
-            var deleted = await _repository.DeleteVehicleAsync(id);
+            var vehicle = await _context.Vehicles
+                .FirstOrDefaultAsync(v => v.VehicleId == id && v.CustomerUserId == userId);
+            if (vehicle == null) return NotFound();
 
-            if (!deleted) return NotFound("Vehicle not found.");
- 
+            _context.Vehicles.Remove(vehicle);
+            await _context.SaveChangesAsync();
             return Ok("Vehicle deleted successfully.");
-
         }
- 
-        [HttpGet("AllVehicles")]
 
-        public async Task<ActionResult<IEnumerable<VehicleListDTO>>> GetAllVehiclesAsync()
-
+        // GET: api/vehicle/all (Admin only)
+        [Authorize(Roles = "Admin")]
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllVehicles()
         {
-
-            var vehicles = await _repository.GetAllVehiclesAsync();
-
-            return Ok(vehicles);
-
+            var vehicles = await _context.Vehicles.ToListAsync();
+            return Ok(_mapper.Map<IEnumerable<VehicleListDTO>>(vehicles));
         }
- 
-        [HttpGet("getVehicleById/{id}")]
 
-        public async Task<ActionResult<VehicleDetailsDTO>> GetVehicleByIdAsync(int id)
-
+        // GET: api/vehicle/{id}
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetVehicleById(int id)
         {
+            var vehicle = await _context.Vehicles.FindAsync(id);
+            if (vehicle == null) return NotFound();
 
-            var vehicle = await _repository.GetVehicleByIdAsync(id);
-
-            if (vehicle == null) return NotFound($"Vehicle with ID {id} not found.");
- 
-            return Ok(vehicle);
-
+            return Ok(_mapper.Map<VehicleDetailsDTO>(vehicle));
         }
- 
-        [HttpGet("getVehiclesByOwner/{ownerId}")]
 
-        public async Task<ActionResult<IEnumerable<VehicleListDTO>>> GetVehiclesByOwnerAsync(int ownerId)
-
+        // GET: api/vehicle/search (Admin only)
+        [Authorize(Roles = "Admin")]
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchVehicles(string? model, string? numberPlate, string? type, string? color, string? customerUserId)
         {
+            var query = _context.Vehicles.AsQueryable();
 
-            var vehicles = await _repository.GetVehiclesByOwnerIdAsync(ownerId);
+            if (!string.IsNullOrEmpty(model)) query = query.Where(v => v.Model.Contains(model));
+            if (!string.IsNullOrEmpty(numberPlate)) query = query.Where(v => v.NumberPlate.Contains(numberPlate));
+            if (!string.IsNullOrEmpty(type)) query = query.Where(v => v.Type.Contains(type));
+            if (!string.IsNullOrEmpty(color)) query = query.Where(v => v.Color.Contains(color));
+            if (!string.IsNullOrEmpty(customerUserId)) query = query.Where(v => v.CustomerUserId == customerUserId);
 
-            if (vehicles == null || !vehicles.Any())
-
-                return NotFound($"No vehicles found for Owner ID {ownerId}.");
- 
-            return Ok(vehicles);
-
+            var vehicles = await query.ToListAsync();
+            return Ok(_mapper.Map<IEnumerable<VehicleListDTO>>(vehicles));
         }
-
     }
-
 }

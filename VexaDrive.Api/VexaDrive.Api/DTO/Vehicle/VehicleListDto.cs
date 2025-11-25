@@ -7,7 +7,7 @@ namespace VexaDriveAPI.DTO.VehicleDTO
         public string? NumberPlate { get; set; }
         public string? Type { get; set; }
         public string? Color { get; set; }
- 
-        public int OwnerId { get; set; }
+
+        public string? CustomerUserId { get; set; }
     }
 }

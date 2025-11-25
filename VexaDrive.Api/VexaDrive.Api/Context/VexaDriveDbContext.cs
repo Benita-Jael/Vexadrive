@@ -1,61 +1,84 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-
 using Microsoft.EntityFrameworkCore;
-
 using VexaDriveAPI.Models;
- 
+
 namespace VexaDriveAPI.Context
-
 {
-
-    public class VexaDriveDbContext : IdentityDbContext
-
+    public class VexaDriveDbContext : IdentityDbContext<IdentityUser>
     {
-
         public VexaDriveDbContext(DbContextOptions<VexaDriveDbContext> options)
+            : base(options) { }
 
-            : base(options)
-
-        {
-
-        }
- 
         public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<ServiceRequest> ServiceRequests { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Bill> Bills { get; set; }
 
-        public DbSet<Owner> Owners { get; set; }
- 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-
         {
-
             base.OnModelCreating(modelBuilder);
- 
-            // Seed Owners
 
-            modelBuilder.Entity<Owner>().HasData(
+            // Relationships
+            modelBuilder.Entity<ServiceRequest>()
+                .HasOne(sr => sr.Vehicle)
+                .WithMany(v => v.ServiceRequests)
+                .HasForeignKey(sr => sr.VehicleId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-                new Owner { OwnerId = 1, FirstName = "John", LastName = "Doe", ContactNumber = "9876543210", Email = "john.doe@example.com" },
+            modelBuilder.Entity<ServiceRequest>()
+                .HasOne(sr => sr.Bill)
+                .WithOne(b => b.ServiceRequest)
+                .HasForeignKey<Bill>(b => b.ServiceRequestId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-                new Owner { OwnerId = 2, FirstName = "Emma", LastName = "Smith", ContactNumber = "9753108642", Email = "emma.smith@example.com" },
+            modelBuilder.Entity<Notification>()
+                .HasOne(n => n.ServiceRequest)
+                .WithMany(sr => sr.Notifications)
+                .HasForeignKey(n => n.ServiceRequestId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-                new Owner { OwnerId = 3, FirstName = "Raj", LastName = "Kumar", ContactNumber = "9898989898", Email = "raj.kumar@example.com" }
+            // Indexes
+            modelBuilder.Entity<Vehicle>()
+                .HasIndex(v => v.NumberPlate)
+                .IsUnique();
 
+            modelBuilder.Entity<ServiceRequest>()
+                .HasIndex(sr => new { sr.Status, sr.CreatedAt });
+
+            // Seed Admin role + user (STATIC values only)
+            var adminRoleId = "00000000-0000-0000-0000-000000000001";
+            var customerRoleId = "00000000-0000-0000-0000-000000000002";
+            var adminUserId = "00000000-0000-0000-0000-000000000003";
+
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole { Id = adminRoleId, Name = "Admin", NormalizedName = "ADMIN" },
+                new IdentityRole { Id = customerRoleId, Name = "Customer", NormalizedName = "CUSTOMER" }
             );
- 
-            // Seed Vehicles
 
-            modelBuilder.Entity<Vehicle>().HasData(
+            // Precomputed password hash for "Admin@123"
+            // 👉 Generate once using PasswordHasher and paste here
+            var adminPasswordHash = "AQAAAAIAAYagAAAAEB4x+LWMreo4yjc3W0Ur0bRgIgKWwutEO0yeNI6bE1I5uk1F+P3gIJtFcK6B2qocDA==";
 
-                new Vehicle { VehicleId = 1, Model = "Honda City", NumberPlate = "TN10AB1234", Type = "Car", OwnerId = 1 },
 
-                new Vehicle { VehicleId = 2, Model = "Yamaha FZ", NumberPlate = "TN22CD5678", Type = "Bike", OwnerId = 2 },
+            var adminUser = new IdentityUser
+            {
+                Id = adminUserId,
+                UserName = "admin@vexadrive.com",
+                NormalizedUserName = "ADMIN@VEXADRIVE.COM",
+                Email = "admin@vexadrive.com",
+                NormalizedEmail = "ADMIN@VEXADRIVE.COM",
+                EmailConfirmed = true,
+                SecurityStamp = "STATIC-SECURITY-STAMP",
+                ConcurrencyStamp = "STATIC-CONCURRENCY-STAMP",
+                PasswordHash = adminPasswordHash
+            };
 
-                new Vehicle { VehicleId = 3, Model = "Hyundai i20", NumberPlate = "TN05EF9898", Type = "Car", OwnerId = 3 }
+            modelBuilder.Entity<IdentityUser>().HasData(adminUser);
 
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string> { RoleId = adminRoleId, UserId = adminUserId }
             );
-
         }
-
     }
-
 }
