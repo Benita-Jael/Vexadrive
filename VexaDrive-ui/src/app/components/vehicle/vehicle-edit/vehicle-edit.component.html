@@ -1,0 +1,108 @@
+<div class="card form-card">
+<div class="card-header">
+<h5>Edit Vehicle</h5>
+</div>
+ 
+  <div class="card-body" *ngIf="!loading; else loadingTpl">
+ 
+    <form #editForm="ngForm" (ngSubmit)="onUpdateSubmit(editForm)" novalidate>
+ 
+      <div class="form-row">
+ 
+        <!-- Model -->
+<div class="form-group">
+<label>Model *</label>
+<input
+            name="model"
+            [(ngModel)]="vehicleModel.model"
+            required
+            class="form-control"
+          />
+</div>
+ 
+        <!-- Number Plate -->
+<div class="form-group">
+<label>Number Plate</label>
+<input
+            name="numberPlate"
+            [(ngModel)]="vehicleModel.numberPlate"
+            class="form-control"
+          />
+</div>
+ 
+      </div>
+ 
+      <div class="form-row">
+ 
+        <!-- Type -->
+<div class="form-group">
+<label>Type *</label>
+<input
+            name="type"
+            [(ngModel)]="vehicleModel.type"
+            required
+            class="form-control"
+            placeholder="Car, Bike..."
+          />
+</div>
+ 
+        <!-- Color -->
+<div class="form-group">
+<label>Color *</label>
+<input
+            name="color"
+            [(ngModel)]="vehicleModel.color"
+            required
+            class="form-control"
+          />
+</div>
+ 
+      </div>
+ 
+      <div class="form-row">
+ 
+        <!-- Owner -->
+<div class="form-group">
+<label>Owner *</label>
+<select
+            name="ownerId"
+            [(ngModel)]="vehicleModel.ownerId"
+            required
+            class="form-control"
+>
+<option disabled value="">Select Owner</option>
+<option *ngFor="let owner of owners" [ngValue]="owner.ownerId">
+              {{ owner.fullName }} — {{ owner.contactNumber }}
+</option>
+</select>
+</div>
+ 
+      </div>
+ 
+      <!-- Validation error -->
+<div
+        *ngIf="editForm.submitted && editForm.invalid"
+        class="alert alert-danger"
+>
+        Please fill all required fields correctly.
+</div>
+ 
+      <!-- Buttons -->
+<div class="form-actions mt-3">
+<button class="btn btn-primary" type="submit" [disabled]="loading">
+          {{ loading ? 'Updating...' : 'Update Vehicle' }}
+</button>
+ 
+        <button class="btn btn-secondary" type="button" (click)="onCancel()">
+          Cancel
+</button>
+</div>
+ 
+    </form>
+ 
+  </div>
+ 
+  <ng-template #loadingTpl>
+<div class="loading-text">Loading vehicle details...</div>
+</ng-template>
+</div>

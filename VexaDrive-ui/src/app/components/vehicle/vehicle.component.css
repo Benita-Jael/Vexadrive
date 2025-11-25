@@ -1,0 +1,62 @@
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #CAF0F8 0%, #ADE8F4 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container Styling */
+.container {
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Button Glow Effects */
+.btn-primary,
+.btn-secondary {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #64c3d9;
+  box-shadow: 0 0 12px rgba(100, 195, 217, 0.6);
+  transform: scale(1.03);
+}
+
+.btn-secondary:hover {
+  background-color: #005f8d;
+  box-shadow: 0 0 12px rgba(0, 95, 141, 0.6);
+  transform: scale(1.03);
+}
+
+/* Vehicle List Card */
+app-vehicle-list {
+  display: block;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Table Row Hover (inside vehicle-list component) */
+.vehicle-table tr:hover {
+  background-color: #e0f7fa;
+  transition: background-color 0.3s ease;
+}
+
+/* Error styling remains unchanged */
+.alert-error {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #E63946;
+  background-color: #ffe6e6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px auto;
+  text-align: center;
+  max-width: 400px;
+}

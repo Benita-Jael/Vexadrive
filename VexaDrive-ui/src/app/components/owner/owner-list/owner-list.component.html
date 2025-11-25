@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Owner List</h5>
+  </div>
+
+  <div class="card-body">
+    <!-- Loading state -->
+    <div *ngIf="loading" class="text-center p-3 loading-text">
+      Loading owners...
+    </div>
+
+    <!-- Empty state -->
+    <div *ngIf="!loading && owners.length === 0" class="alert alert-info">
+      No owners found.
+    </div>
+
+    <!-- Table -->
+    <div *ngIf="!loading && owners.length > 0" class="table-responsive">
+      <table class="table table-bordered table-striped owner-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let o of owners">
+            <td>{{ o.ownerId }}</td>
+            <td>{{ o.fullName }}</td>
+            <td>{{ o.contactNumber }}</td>
+            <td>{{ o.email }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-1" (click)="onEditOwner(o)">
+                Edit
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="onDeleteOwner(o)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

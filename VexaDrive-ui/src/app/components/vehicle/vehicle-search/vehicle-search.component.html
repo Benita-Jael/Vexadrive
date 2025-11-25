@@ -1,0 +1,79 @@
+<div class="card mb-4 search-card">
+ 
+  <div class="card-header d-flex justify-content-between align-items-center">
+<h5>Search Vehicles</h5>
+ 
+    <button type="button" (click)="onCancel()" class="btn-close-text">
+      X
+</button>
+</div>
+ 
+  <div class="card-body">
+ 
+    <form #searchForm="ngForm" (ngSubmit)="onSearchSubmit()">
+ 
+      <div class="form-row">
+ 
+        <!-- Vehicle ID -->
+<div class="form-group">
+<label>ID</label>
+<input type="number" name="vehicleId" [(ngModel)]="searchModel.vehicleId"
+                 class="form-control" placeholder="Enter Vehicle ID" />
+</div>
+ 
+        <!-- Model -->
+<div class="form-group">
+<label>Model</label>
+<input type="text" name="model" [(ngModel)]="searchModel.model"
+                 class="form-control" placeholder="Enter Model" />
+</div>
+ 
+        <!-- Number Plate -->
+<div class="form-group">
+<label>Number Plate</label>
+<input type="text" name="numberPlate" [(ngModel)]="searchModel.numberPlate"
+                 class="form-control" placeholder="Enter Plate Number" />
+</div>
+ 
+        <!-- Type -->
+<div class="form-group">
+<label>Type</label>
+<input type="text" name="type" [(ngModel)]="searchModel.type"
+                 class="form-control" placeholder="Car, Bike, etc." />
+</div>
+ 
+        <!-- Color -->
+<div class="form-group">
+<label>Color</label>
+<input type="text" name="color" [(ngModel)]="searchModel.color"
+                 class="form-control" placeholder="Enter Color" />
+</div>
+ 
+        <!-- Owner Dropdown -->
+<div class="form-group">
+<label>Owner</label>
+<select name="ownerId"
+                  [(ngModel)]="searchModel.ownerId"
+                  class="form-control">
+ 
+            <option [ngValue]="undefined">All Owners</option>
+ 
+            <option *ngFor="let owner of owners" [ngValue]="owner.ownerId">
+              {{ owner.fullName }} — {{ owner.email }}
+</option>
+ 
+          </select>
+</div>
+ 
+      </div>
+ 
+      <div class="form-actions">
+<button type="submit" class="btn btn-primary" [disabled]="loading">Search</button>
+<button type="button" class="btn btn-secondary" (click)="onClear()">Clear</button>
+</div>
+ 
+    </form>
+ 
+  </div>
+ 
+</div>

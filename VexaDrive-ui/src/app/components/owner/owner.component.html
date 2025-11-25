@@ -1,0 +1,43 @@
+<div class="container mt-3">
+  <!-- Buttons -->
+  <div class="mb-3 d-flex gap-2">
+    <button class="btn btn-primary" (click)="onCreateOwner()" [disabled]="showCreateForm || showEditForm">
+      Add Owner
+    </button>
+    <button class="btn btn-secondary" (click)="onToggleSearch()">
+      {{ showSearchForm ? 'Hide Search' : 'Search Owner' }}
+    </button>
+  </div>
+
+  <!-- Owner Create Component -->
+  <app-owner-create
+    *ngIf="showCreateForm"
+    [loading]="loading"
+    (ownerCreated)="onOwnerCreated()"
+    (formClosed)="showCreateForm = false">
+  </app-owner-create>
+
+  <!-- Owner Edit Component -->
+  <app-owner-edit
+    *ngIf="showEditForm && selectedOwner"
+    [selectedOwner]="selectedOwner"
+    (ownerUpdated)="onOwnerUpdated()"
+    (formClosed)="showEditForm = false">
+  </app-owner-edit>
+
+  <!-- Owner Search Component -->
+  <app-owner-search
+    *ngIf="showSearchForm"
+    [loading]="loading"
+    (searchSubmitted)="onSearchSubmitted($event)"
+    (formClosed)="showSearchForm = false">
+  </app-owner-search>
+
+  <!-- Owner List Component -->
+  <app-owner-list
+    [owners]="owners"
+    [loading]="loading"
+    (editOwner)="onEditOwner($event)"
+    (deleteOwner)="onDeleteOwner($event)">
+  </app-owner-list>
+</div>

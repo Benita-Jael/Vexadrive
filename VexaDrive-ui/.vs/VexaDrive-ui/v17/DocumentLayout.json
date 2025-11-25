@@ -1,0 +1,1254 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\services\\auth\\authservice.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\auth\\authservice.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\guards\\auth.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\guards\\auth.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\footer\\footer.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\footer\\footer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\footer\\footer.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\header\\header.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\header\\header.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\header\\header.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\contact\\contact.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\contact\\contact.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\contact\\contact.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\auth\\signin\\signin.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\auth\\signin\\signin.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\auth\\signin\\signin.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\about\\about.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\about\\about.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\about\\about.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\interceptors\\auth.interceptor.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\interceptors\\auth.interceptor.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\vehicle\\vehicle.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-details\\owner-details.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-details\\owner-details.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-details\\owner-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-edit\\owner-edit.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-list\\owner-list.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-list\\owner-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-list\\owner-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-edit\\owner-edit.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-edit\\owner-edit.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-create\\owner-create.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-create\\owner-create.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\owner\\owner-create\\owner-create.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\auth\\AuthService.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\services\\auth\\AuthService.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\vehicle\\VehicleService.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\services\\vehicle\\VehicleService.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\owner\\OwnerService.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\services\\owner\\OwnerService.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleUpdateDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\vehicle\\VehicleUpdateDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleListDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\vehicle\\VehicleListDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleDetailsDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\vehicle\\VehicleDetailsDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleCreateDto.ts||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\vehicle\\VehicleCreateDto.ts||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerCreateDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\owners\\OwnerCreateDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerDetailsDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\owners\\OwnerDetailsDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerListDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\owners\\OwnerListDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerUpdateDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\owners\\OwnerUpdateDto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authLoginRequests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\auth\\authLoginRequests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authRegisterResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\auth\\authRegisterResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authRegisterRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\auth\\authRegisterRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authLoginResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\auth\\authLoginResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authConstants.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\models\\auth\\authConstants.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "authservice.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\services\\auth\\authservice.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\auth\\authservice.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\services\\auth\\authservice.ts",
+              "RelativeToolTip": "src\\app\\services\\auth\\authservice.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-21T13:51:55.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.css",
+              "RelativeDocumentMoniker": "src\\app\\app.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.css",
+              "RelativeToolTip": "src\\app\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T10:02:26.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.routes.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.routes.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.routes.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.routes.ts",
+              "RelativeToolTip": "src\\app\\app.routes.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:39:47.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.html",
+              "RelativeDocumentMoniker": "src\\app\\app.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.html",
+              "RelativeToolTip": "src\\app\\app.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T10:02:20.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "app.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.ts",
+              "RelativeToolTip": "src\\app\\app.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:39:59.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "auth.guard.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\guards\\auth.guard.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\guards\\auth.guard.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\guards\\auth.guard.ts",
+              "RelativeToolTip": "src\\app\\components\\guards\\auth.guard.ts",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:20:06.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "owner.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.ts",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner.component.ts",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:11:39.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "vehicle.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.ts",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:16:00.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "footer.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\footer\\footer.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.css",
+              "RelativeToolTip": "src\\app\\components\\footer\\footer.component.css",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T06:03:24.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "footer.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\footer\\footer.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.html",
+              "RelativeToolTip": "src\\app\\components\\footer\\footer.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T06:03:32.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "footer.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\footer\\footer.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\footer\\footer.component.ts",
+              "RelativeToolTip": "src\\app\\components\\footer\\footer.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:03:36.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "header.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\header\\header.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.css",
+              "RelativeToolTip": "src\\app\\components\\header\\header.component.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T03:41:21.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "header.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\header\\header.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.html",
+              "RelativeToolTip": "src\\app\\components\\header\\header.component.html",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T03:41:19.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "header.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\header\\header.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\header\\header.component.ts",
+              "RelativeToolTip": "src\\app\\components\\header\\header.component.ts",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:41:16.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "contact.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\contact\\contact.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.css",
+              "RelativeToolTip": "src\\app\\components\\contact\\contact.component.css",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T06:02:59.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "contact.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\contact\\contact.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.html",
+              "RelativeToolTip": "src\\app\\components\\contact\\contact.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T06:03:04.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "contact.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\contact\\contact.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\contact\\contact.component.ts",
+              "RelativeToolTip": "src\\app\\components\\contact\\contact.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:03:17.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "signin.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\auth\\signin\\signin.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.css",
+              "RelativeToolTip": "src\\app\\components\\auth\\signin\\signin.component.css",
+              "ViewState": "AgIAADYAAAAAAAAAAAAIwEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T06:01:58.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "signin.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\auth\\signin\\signin.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.html",
+              "RelativeToolTip": "src\\app\\components\\auth\\signin\\signin.component.html",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAIwHIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T06:02:07.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "signin.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\auth\\signin\\signin.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\auth\\signin\\signin.component.ts",
+              "RelativeToolTip": "src\\app\\components\\auth\\signin\\signin.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:02:16.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "about.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\about\\about.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.css",
+              "RelativeToolTip": "src\\app\\components\\about\\about.component.css",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAIwCYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T06:01:26.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "about.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\about\\about.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.html",
+              "RelativeToolTip": "src\\app\\components\\about\\about.component.html",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T06:01:19.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "about.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\about\\about.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\about\\about.component.ts",
+              "RelativeToolTip": "src\\app\\components\\about\\about.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:01:50.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "home.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.ts",
+              "RelativeToolTip": "src\\app\\components\\home\\home.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:44:52.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "home.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.css",
+              "RelativeToolTip": "src\\app\\components\\home\\home.component.css",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T03:41:23.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "home.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.component.html",
+              "RelativeToolTip": "src\\app\\components\\home\\home.component.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T03:41:26.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "auth.interceptor.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\interceptors\\auth.interceptor.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\interceptors\\auth.interceptor.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\interceptors\\auth.interceptor.ts",
+              "RelativeToolTip": "src\\app\\components\\interceptors\\auth.interceptor.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:22:22.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "vehicle-list.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.ts",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.ts",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwDoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:25:18.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "vehicle-list.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.css",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:25:05.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "vehicle-list.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.html",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-list\\vehicle-list.component.html",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:24:44.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "vehicle-details.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.ts",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.ts",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:24:05.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "vehicle-details.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.css",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.css",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:23:51.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "vehicle-details.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.html",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-details\\vehicle-details.component.html",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:23:42.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "vehicle-edit.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.css",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:22:30.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "vehicle-edit.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.ts",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.ts",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:22:42.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "vehicle-edit.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.html",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-edit\\vehicle-edit.component.html",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:22:21.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "vehicle-create.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.ts",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.ts",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:20:23.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "vehicle-create.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.css",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.css",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:20:17.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "vehicle-create.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.html",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle-create\\vehicle-create.component.html",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:20:02.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "vehicle.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.css",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle.component.css",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:15:50.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "vehicle.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\vehicle\\vehicle.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\vehicle\\vehicle.component.html",
+              "RelativeToolTip": "src\\app\\components\\vehicle\\vehicle.component.html",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:15:34.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "owner-details.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-details\\owner-details.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.ts",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-details\\owner-details.component.ts",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:14:28.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "owner-details.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-details\\owner-details.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.css",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-details\\owner-details.component.css",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:12:07.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "owner-list.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-list\\owner-list.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.css",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-list\\owner-list.component.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:07:12.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "owner-details.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-details\\owner-details.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-details\\owner-details.component.html",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-details\\owner-details.component.html",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:04:43.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "owner.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.css",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner.component.css",
+              "ViewState": "AgIAACwAAAAAAAAAAADwv0EAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:11:09.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "owner-edit.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-edit\\owner-edit.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.css",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-edit\\owner-edit.component.css",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T07:04:55.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "owner.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner.component.html",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner.component.html",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:10:40.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "owner-list.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-list\\owner-list.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.ts",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-list\\owner-list.component.ts",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:07:26.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "owner-list.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-list\\owner-list.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-list\\owner-list.component.html",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-list\\owner-list.component.html",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:07:05.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "owner-edit.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-edit\\owner-edit.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.ts",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-edit\\owner-edit.component.ts",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:05:14.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "owner-edit.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-edit\\owner-edit.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-edit\\owner-edit.component.html",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-edit\\owner-edit.component.html",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T07:04:46.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "owner-create.component.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-create\\owner-create.component.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.ts",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-create\\owner-create.component.ts",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T07:02:22.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "owner-create.component.css",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-create\\owner-create.component.css",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.css",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-create\\owner-create.component.css",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T06:55:49.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "owner-create.component.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\owner\\owner-create\\owner-create.component.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\owner\\owner-create\\owner-create.component.html",
+              "RelativeToolTip": "src\\app\\components\\owner\\owner-create\\owner-create.component.html",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T06:55:34.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "VehicleService.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\vehicle\\VehicleService.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\services\\vehicle\\VehicleService.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\vehicle\\VehicleService.ts",
+              "RelativeToolTip": "src\\app\\components\\services\\vehicle\\VehicleService.ts",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:26:46.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "AuthService.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\auth\\AuthService.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\services\\auth\\AuthService.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\auth\\AuthService.ts",
+              "RelativeToolTip": "src\\app\\components\\services\\auth\\AuthService.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:26:32.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "OwnerService.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\owner\\OwnerService.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\services\\owner\\OwnerService.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\services\\owner\\OwnerService.ts",
+              "RelativeToolTip": "src\\app\\components\\services\\owner\\OwnerService.ts",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T06:26:22.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\index.html",
+              "RelativeDocumentMoniker": "src\\index.html",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\index.html",
+              "RelativeToolTip": "src\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-20T03:40:23.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "main.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\main.ts",
+              "RelativeDocumentMoniker": "src\\main.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\main.ts",
+              "RelativeToolTip": "src\\main.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:40:44.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "VehicleListDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleListDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\vehicle\\VehicleListDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleListDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\vehicle\\VehicleListDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:28:43.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "VehicleDetailsDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleDetailsDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\vehicle\\VehicleDetailsDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleDetailsDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\vehicle\\VehicleDetailsDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:28:27.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "VehicleCreateDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleCreateDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\vehicle\\VehicleCreateDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleCreateDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\vehicle\\VehicleCreateDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:27:58.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "VehicleUpdateDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleUpdateDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\vehicle\\VehicleUpdateDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\vehicle\\VehicleUpdateDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\vehicle\\VehicleUpdateDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:29:03.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "OwnerCreateDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerCreateDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\owners\\OwnerCreateDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerCreateDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\owners\\OwnerCreateDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:26:30.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "OwnerDetailsDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerDetailsDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\owners\\OwnerDetailsDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerDetailsDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\owners\\OwnerDetailsDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:26:48.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "OwnerListDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerListDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\owners\\OwnerListDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerListDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\owners\\OwnerListDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:27:03.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "OwnerUpdateDto.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerUpdateDto.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\owners\\OwnerUpdateDto.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\owners\\OwnerUpdateDto.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\owners\\OwnerUpdateDto.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:27:26.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "authLoginRequests.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authLoginRequests.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\auth\\authLoginRequests.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authLoginRequests.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\auth\\authLoginRequests.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:24:15.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "home.spec.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.spec.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\home\\home.spec.ts",
+              "RelativeToolTip": "src\\app\\components\\home\\home.spec.ts",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:41:24.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "angular.json",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\angular.json",
+              "RelativeDocumentMoniker": "angular.json",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\angular.json",
+              "RelativeToolTip": "angular.json",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-20T03:40:57.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "app.spec.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.spec.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.spec.ts",
+              "RelativeToolTip": "src\\app\\app.spec.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:39:54.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "app.config.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.config.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.config.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\app.config.ts",
+              "RelativeToolTip": "src\\app\\app.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:39:30.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "authConstants.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authConstants.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\auth\\authConstants.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authConstants.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\auth\\authConstants.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:23:59.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "authLoginResponse.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authLoginResponse.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\auth\\authLoginResponse.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authLoginResponse.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\auth\\authLoginResponse.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:25:31.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "authRegisterRequest.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authRegisterRequest.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\auth\\authRegisterRequest.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authRegisterRequest.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\auth\\authRegisterRequest.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:25:52.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "authRegisterResponse.ts",
+              "DocumentMoniker": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authRegisterResponse.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\models\\auth\\authRegisterResponse.ts",
+              "ToolTip": "C:\\Users\\2416649\\Downloads\\VexaDrive\\VexaDrive-ui\\src\\app\\components\\models\\auth\\authRegisterResponse.ts",
+              "RelativeToolTip": "src\\app\\components\\models\\auth\\authRegisterResponse.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-20T03:26:09.346Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Vehicle List</h5>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Loading state -->
+    <div *ngIf="loading" class="text-center p-3 loading-text">
+      Loading vehicles...
+    </div>
+
+    <!-- Empty state -->
+    <div *ngIf="!loading && vehicles.length === 0" class="alert alert-info">
+      No vehicles found.
+    </div>
+
+    <!-- Table -->
+    <div *ngIf="!loading && vehicles.length > 0" class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Model</th>
+            <th>Number Plate</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Owner ID</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let v of vehicles">
+            <td>{{ v.vehicleId }}</td>
+            <td>{{ v.model }}</td>
+            <td>{{ v.numberPlate }}</td>
+            <td>{{ v.type }}</td>
+            <td>{{ v.color }}</td>
+            <td>{{ v.ownerId }}</td>
+
+            <td>
+              <!-- ✅ Pass full object instead of just ID -->
+              <button class="btn btn-sm btn-primary me-1" (click)="onEdit(v)">
+                Edit
+              </button>
+
+              <button class="btn btn-sm btn-danger" (click)="onDelete(v.vehicleId)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

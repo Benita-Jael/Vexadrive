@@ -1,0 +1,30 @@
+.loading-text {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #0077B6;
+}
+
+.card-header h5 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: #0077B6;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+/* Error styling */
+.alert-error {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #E63946;
+  background-color: #ffe6e6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px auto;
+  text-align: center;
+  max-width: 400px;
+}

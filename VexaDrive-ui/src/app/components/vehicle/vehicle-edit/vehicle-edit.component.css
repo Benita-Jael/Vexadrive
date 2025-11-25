@@ -1,0 +1,93 @@
+.form-card {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-header h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #0077B6;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.card-header i {
+  margin-right: 8px;
+  color: #0077B6;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 1rem;
+}
+
+  .form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #0077B6;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+.form-control {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #333;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.alert-danger {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #E63946;
+  background-color: #FDECEA;
+  border: 1px solid #E63946;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #0077B6;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #90E0EF;
+  border: none;
+  color: #003f5c;
+}
+
+.btn-primary[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

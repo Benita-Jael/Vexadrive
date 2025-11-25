@@ -1,0 +1,65 @@
+<div class="card mb-4 form-card">
+<div class="card-header">
+<h5>Add Vehicle</h5>
+</div>
+<div class="card-body">
+<form #createForm="ngForm" (ngSubmit)="onCreateSubmit(createForm)" novalidate>
+ 
+      <div class="form-row">
+<!-- Model -->
+<div class="form-group">
+<label>Model *</label>
+<input name="model" [(ngModel)]="vehicleModel.model" required class="form-control" />
+</div>
+ 
+        <!-- Number Plate -->
+<div class="form-group">
+<label>Number Plate</label>
+<input name="numberPlate" [(ngModel)]="vehicleModel.numberPlate" class="form-control" />
+</div>
+</div>
+ 
+      <div class="form-row">
+<!-- Type -->
+<div class="form-group">
+<label>Type *</label>
+<input name="type" [(ngModel)]="vehicleModel.type" required class="form-control" placeholder="Car, Bike..." />
+</div>
+ 
+        <!-- Color -->
+<div class="form-group">
+<label>Color *</label>
+<input name="color" [(ngModel)]="vehicleModel.color" required class="form-control" />
+</div>
+</div>
+ 
+      <div class="form-row">
+<!-- Owner Dropdown -->
+<div class="form-group">
+<label>Owner *</label>
+<select name="ownerId" [(ngModel)]="vehicleModel.ownerId" required class="form-control">
+<option value="" disabled>Select Owner</option>
+<option *ngFor="let owner of owners" [ngValue]="owner.ownerId">
+              {{ owner.fullName }} — {{ owner.contactNumber }}
+</option>
+</select>
+</div>
+</div>
+ 
+      <!-- Error message -->
+<div *ngIf="createForm.submitted && createForm.invalid" class="alert alert-danger mt-2">
+        Please fill in all required fields correctly.
+</div>
+ 
+      <!-- Buttons -->
+<div class="form-actions mt-3">
+<button type="submit" [disabled]="loading" class="btn btn-primary">
+          {{ loading ? 'Creating...' : 'Create Vehicle' }}
+</button>
+<button type="button" (click)="onCancel()" class="btn btn-secondary">
+          Cancel
+</button>
+</div>
+</form>
+</div>
+</div>

@@ -1,0 +1,20 @@
+/* Footer background */
+.footer-background {
+  background: linear-gradient(135deg, #0d3ea0 0%, #082a6b 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  border-radius: 0 !important;
+}
+
+  /* Footer text */
+  .footer-background p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Footer icon */
+  .footer-background i {
+    color: #ffffff;
+    vertical-align: middle;
+  }

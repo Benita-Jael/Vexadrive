@@ -1,0 +1,50 @@
+.search-card {
+  font-family: 'Open Sans', sans-serif;
+}
+ 
+.card-header h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #0077B6;
+  margin: 0;
+}
+ 
+.btn-close-text {
+  color: #dc3545;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+ 
+.btn-close-text:hover {
+  color: #b02a37;
+  transform: scale(1.1);
+}
+ 
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+ 
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.form-group label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #0077B6;
+}
+ 
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
