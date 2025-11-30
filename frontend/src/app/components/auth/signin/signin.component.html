@@ -1,0 +1,107 @@
+<div class="signin-container">
+  <div class="d-flex align-items-center justify-content-center min-vh-100 signin-bg">
+
+    <div class="signin-card animate-slide-in-up">
+
+      <!-- Header -->
+      <div class="signin-header">
+        <h1 class="text-center">VexaDrive</h1>
+        <p class="text-center text-muted">Vehicle Service Management</p>
+      </div>
+
+      <!-- Error Alert -->
+      <div *ngIf="signinError" class="alert alert-error animate-fade-in">
+        <strong>Sign In Failed:</strong> {{ signinError }}
+      </div>
+
+      <!-- Success Alert -->
+      <div *ngIf="signinSuccess" class="alert alert-success animate-fade-in">
+        <strong>Success!</strong> {{ signinSuccess }}
+      </div>
+
+      <!-- Sign In Form -->
+      <form [formGroup]="signinForm" (ngSubmit)="onSignin()" class="flex-column">
+
+        <!-- Email Field -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control form-control-lg"
+            formControlName="email"
+            placeholder="admin@vexadrive.com or customer@example.com"
+            [class.is-invalid]="isFieldInvalid('email')" />
+          <small *ngIf="isFieldInvalid('email')" class="text-error mt-sm">
+            Please enter a valid email
+          </small>
+        </div>
+
+        <!-- Password Field -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="password-input-group">
+            <input
+              id="password"
+              [type]="showPassword ? 'text' : 'password'"
+              class="form-control form-control-lg"
+              formControlName="password"
+              placeholder="Enter your password"
+              [class.is-invalid]="isFieldInvalid('password')" />
+            <button
+              type="button"
+              class="btn-toggle-password"
+              (click)="togglePasswordVisibility()"
+              title="Toggle password visibility">
+              {{ showPassword ? '' : '' }}
+            </button>
+          </div>
+          <small *ngIf="isFieldInvalid('password')" class="text-error mt-sm">
+            Password is required
+          </small>
+        </div>
+
+        <!-- Demo Credentials Info -->
+        <div class="demo-info alert alert-info">
+          <strong>Demo Credentials:</strong>
+          <br />
+          <small>
+            Admin: admin@vexadrive.com / Admin@123
+            <br />
+            Or register as a new customer
+          </small>
+        </div>
+
+        <!-- Sign In Button -->
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg"
+          [disabled]="signinForm.invalid || signinLoading"
+          style="width: 100%;">
+          <span *ngIf="!signinLoading">Sign In</span>
+          <span *ngIf="signinLoading" class="animate-pulse">Signing in...</span>
+        </button>
+
+      </form>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>New to VexaDrive?</span>
+      </div>
+
+      <!-- Register Link -->
+      <a href="/register" class="btn btn-secondary btn-lg" style="width: 100%; text-align: center; display: block;">
+        Create Account as Customer
+      </a>
+
+      <!-- Footer -->
+      <div class="signin-footer">
+        <p class="text-center text-xs text-muted">
+          <a href="/about">About Us</a>  <a href="/contact">Contact</a>  <a href="/about">Privacy Policy</a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>

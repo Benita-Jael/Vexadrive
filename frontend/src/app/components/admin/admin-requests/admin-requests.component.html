@@ -1,0 +1,174 @@
+<div class="admin-page" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: var(--spacing-2xl) 0;">
+  <div class="container" style="max-width: 1400px;">
+    <!-- Page Header -->
+    <div class="page-header mb-2xl">
+      <h1 class="fw-bold mb-sm" style="color: var(--color-primary-900); font-size: var(--font-size-4xl);">Service Requests Management</h1>
+      <p class="text-muted">View, filter, and manage all customer service requests</p>
+    </div>
+
+    <!-- Error/Success Messages -->
+    <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show animate-fade-in" role="alert" style="border-left: 4px solid var(--color-error); margin-bottom: var(--spacing-lg);">
+      {{ errorMessage }}
+      <button type="button" class="btn-close" (click)="errorMessage = null"></button>
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show animate-fade-in" role="alert" style="border-left: 4px solid var(--color-success); margin-bottom: var(--spacing-lg);">
+      {{ successMessage }}
+      <button type="button" class="btn-close" (click)="successMessage = null"></button>
+    </div>
+
+    <!-- Filters -->
+    <div class="card mb-2xl" style="border: none; box-shadow: var(--shadow-md);">
+      <div class="card-body" style="padding: var(--spacing-lg);">
+        <div class="row">
+          <div class="col-lg-6 mb-lg">
+            <label class="form-label fw-bold">Filter by Status</label>
+            <select class="form-select" [(ngModel)]="filterStatus" (change)="applyFilters()" style="border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-md);">
+              <option value="all">All Statuses</option>
+              <option value="RequestCreated">📝 Request Created</option>
+              <option value="ServiceInProgress">🔧 In Progress</option>
+              <option value="ServiceCompleted">✓ Completed</option>
+              <option value="ReadyForPickup">📦 Ready for Pickup</option>
+            </select>
+          </div>
+          <div class="col-lg-6 mb-lg">
+            <label class="form-label fw-bold">Search Requests</label>
+            <input type="text" class="form-control" [(ngModel)]="searchText" (ngModelChange)="applyFilters()" placeholder="Search by vehicle model or problem..." style="border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-md);" />
+          </div>
+        </div>
+        <button class="btn btn-secondary" (click)="loadRequests()" style="font-weight: 600; border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-lg);">
+          ↻ Refresh Requests
+        </button>
+      </div>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="text-center py-2xl">
+      <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-lg text-muted fw-500">Loading service requests...</p>
+    </div>
+
+    <!-- Requests Table -->
+    <div *ngIf="!loading && filteredRequests.length > 0" class="card" style="border: none; box-shadow: var(--shadow-md); overflow-x: auto;">
+      <table class="table table-hover mb-0" style="border: none;">
+        <thead style="background-color: #f9fafb; border-bottom: 2px solid #e5e7eb;">
+          <tr>
+            <th style="font-weight: 600; padding: var(--spacing-lg); color: var(--color-primary-900);">ID</th>
+            <th style="font-weight: 600; padding: var(--spacing-lg); color: var(--color-primary-900);">Vehicle</th>
+            <th style="font-weight: 600; padding: var(--spacing-lg); color: var(--color-primary-900);">Status</th>
+            <th style="font-weight: 600; padding: var(--spacing-lg); color: var(--color-primary-900);">Service Date</th>
+            <th style="font-weight: 600; padding: var(--spacing-lg); color: var(--color-primary-900);">ETD</th>
+            <th style="font-weight: 600; padding: var(--spacing-lg); color: var(--color-primary-900);">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let req of filteredRequests" style="border-bottom: 1px solid #e5e7eb; transition: background-color 0.2s ease;">
+            <td style="padding: var(--spacing-lg); font-weight: 600; color: var(--color-primary);">
+              #{{ req.serviceRequestId }}
+            </td>
+            <td style="padding: var(--spacing-lg);">
+              <div style="font-weight: 600;">{{ req.vehicleModel }}</div>
+              <small class="text-muted">{{ req.problemDescription | slice:0:50 }}...</small>
+              <div style="margin-top: .5rem; font-size: .9rem; color: var(--color-neutral-700);">
+                <div><strong>Owner:</strong> {{ req.ownerName || '-' }} ({{ req.ownerEmail || '-' }})</div>
+                <div><strong>Contact:</strong> {{ req.ownerContact || '-' }}</div>
+              </div>
+            </td>
+            <td style="padding: var(--spacing-lg);">
+              <select class="form-select" [value]="req.status" (change)="changeStatus(req, $any($event.target).value)" style="border-radius: var(--radius-sm); padding: .25rem .5rem;">
+                <option value="RequestCreated">📝 Request Created</option>
+                <option value="ServiceInProgress">🔧 In Progress</option>
+                <option value="ServiceCompleted">✓ Completed</option>
+                <option value="ReadyForPickup">📦 Ready for Pickup</option>
+              </select>
+            </td>
+            <td style="padding: var(--spacing-lg); font-size: 0.875rem;">
+              {{ req.serviceDateOnly || (req.serviceDate | date:'yyyy-MM-dd') }}
+            </td>
+            <td style="padding: var(--spacing-lg); font-size: 0.875rem;">
+              <span *ngIf="req.estimatedDeliveryDateOnly" style="font-weight: 500;">{{ req.estimatedDeliveryDateOnly }}</span>
+              <span *ngIf="!req.estimatedDeliveryDateOnly && req.estimatedDeliveryDate" style="font-weight: 500;">{{ req.estimatedDeliveryDate | date:'yyyy-MM-dd' }}</span>
+              <span *ngIf="!req.estimatedDeliveryDate && !req.estimatedDeliveryDateOnly" class="text-muted">-</span>
+            </td>
+            <td style="padding: var(--spacing-lg);">
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-primary" (click)="selectRequest(req)" style="font-weight: 600; border-radius: var(--radius-sm);">
+                  Update
+                </button>
+                <button class="btn btn-sm btn-outline-danger" (click)="deleteRequest(req)" style="font-weight: 600; border-radius: var(--radius-sm);">
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- No Results -->
+    <div *ngIf="!loading && filteredRequests.length === 0" class="card animate-fade-in" style="border: none; box-shadow: var(--shadow-md); background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b;">
+      <div class="card-body text-center py-2xl">
+        <h5 style="color: #b45309; font-weight: 600;">No service requests found</h5>
+        <p class="text-muted mb-0">Try adjusting your filters or search criteria</p>
+      </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div *ngIf="showUpdateForm && selectedRequest" class="modal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 1050; padding: var(--spacing-lg);">
+      <div class="card animate-slide-in-up" style="border: none; box-shadow: var(--shadow-lg); max-width: 600px; width: 100%; max-height: 90vh; overflow-y: auto;">
+        <div class="card-header" style="background-color: var(--color-primary); color: white; border: none; padding: var(--spacing-lg); display: flex; justify-content: space-between; align-items: center;">
+          <h5 style="margin: 0; font-weight: 600;">Update Request #{{ selectedRequest.serviceRequestId }}</h5>
+          <button class="btn-close btn-close-white" (click)="closeUpdate()" style="background-color: transparent; border: none; cursor: pointer; font-size: 1.5rem;">×</button>
+        </div>
+
+        <div class="card-body" style="padding: var(--spacing-2xl);">
+          <!-- Request Info -->
+          <div class="mb-2xl">
+            <p class="text-muted small"><strong>Vehicle:</strong> {{ selectedRequest.vehicleModel }}</p>
+            <p class="text-muted small"><strong>Problem:</strong> {{ selectedRequest.problemDescription }}</p>
+            <p class="text-muted small"><strong>Address:</strong> {{ selectedRequest.serviceAddress }}</p>
+          </div>
+
+          <!-- Update Form -->
+          <form [formGroup]="updateForm" (ngSubmit)="submitUpdate()">
+            <div class="mb-lg">
+              <label class="form-label fw-bold">Status *</label>
+              <select class="form-select" formControlName="status" style="border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-md);">
+                <option value="">Select new status...</option>
+                <option value="RequestCreated">📝 Request Created</option>
+                <option value="ServiceInProgress">🔧 In Progress</option>
+                <option value="ServiceCompleted">✓ Completed</option>
+                <option value="ReadyForPickup">📦 Ready for Pickup</option>
+              </select>
+            </div>
+
+            <div class="mb-lg">
+              <label class="form-label fw-bold">Estimated Delivery Date</label>
+              <input type="date" class="form-control" formControlName="estimatedDeliveryDate" style="border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-md);" />
+            </div>
+
+            <!-- Bill Upload -->
+            <div class="mb-lg">
+              <label class="form-label fw-bold">Upload Bill (PDF) *</label>
+              <input type="file" accept=".pdf" (change)="onFileSelected($event)" style="border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-md); border: 1px solid #d1d5db; display: block; width: 100%;" />
+              <small class="text-muted d-block mt-sm" *ngIf="!selectedFile">Select a PDF file to upload</small>
+              <small class="text-success d-block mt-sm" *ngIf="selectedFile">📄 {{ selectedFile.name }} selected</small>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2" style="justify-content: flex-end;">
+              <button type="button" class="btn btn-outline-secondary" (click)="closeUpdate()" style="font-weight: 600; border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-lg);">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary" [disabled]="updateForm.invalid || uploading" style="font-weight: 600; border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-lg);">
+                <span *ngIf="uploading" class="spinner-border spinner-border-sm me-2"></span>
+                {{ uploading ? 'Updating...' : '✓ Update & Upload' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

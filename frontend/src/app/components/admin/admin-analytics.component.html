@@ -1,0 +1,21 @@
+<div class="container py-3">
+  <h2>Analytics Dashboard</h2>
+  <div class="row g-3">
+    <div class="col-12 mb-3">
+      <div class="d-flex gap-2">
+        <div *ngFor="let s of statusCounts" class="card p-3" style="flex: 1; min-width: 160px;">
+          <div style="font-weight: 700; font-size: 1.1rem;">{{ s.status }}</div>
+          <div style="font-size: 1.5rem; color: var(--color-primary); font-weight: 700;">{{ s.count }}</div>
+        </div>
+      </div>
+    </div>
+    <!-- Requests by Status cards only (graph removed) -->
+
+    <div class="col-12">
+      <div class="card p-3">
+        <h5 class="mb-2">Vehicles by Type</h5>
+        <canvas #vehicleCanvas width="400" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

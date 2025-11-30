@@ -1,0 +1,63 @@
+<div class="container mt-3">
+ 
+  <!-- Buttons -->
+<div class="mb-3 d-flex gap-2">
+<button class="btn btn-primary" (click)="onCreateVehicle()" [disabled]="showCreateForm || showEditForm">
+
+      Add Vehicle
+</button>
+<button class="btn btn-secondary" (click)="onToggleSearch()">
+
+      {{ showSearchForm ? 'Hide Search' : 'Search Vehicles' }}
+</button>
+</div>
+ 
+  <!-- Vehicle Create Component -->
+<app-vehicle-create
+
+    *ngIf="showCreateForm"
+
+    (vehicleCreated)="onVehicleCreated()"
+
+    (formClosed)="showCreateForm = false"
+></app-vehicle-create>
+ 
+  <!-- Vehicle Edit Component -->
+<app-vehicle-edit
+
+    *ngIf="showEditForm && selectedVehicle"
+
+    [selectedVehicle]="selectedVehicle"
+
+    (vehicleUpdated)="onVehicleUpdated()"
+
+    (formClosed)="showEditForm = false"
+></app-vehicle-edit>
+ 
+  <!-- Vehicle Search Component -->
+<app-vehicle-search
+
+    *ngIf="showSearchForm"
+
+    [loading]="loading"
+
+    (searchSubmitted)="onSearchSubmitted($event)"
+
+    (formClosed)="showSearchForm = false"
+></app-vehicle-search>
+ 
+  <!-- Vehicle List Component -->
+<app-vehicle-list
+
+    [vehicles]="vehicles"
+
+    [loading]="loading"
+
+    (editVehicle)="onEditVehicle($event)"
+
+    (deleteVehicle)="onDeleteVehicle($event)"
+></app-vehicle-list>
+ 
+</div>
+
+ 

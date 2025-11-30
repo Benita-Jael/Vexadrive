@@ -1,0 +1,112 @@
+<header class="header-wrapper">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <div class="navbar-brand">
+        <a routerLink="/home" class="logo">
+          <i class="bi bi-car-front"></i>
+          <span class="brand-text">VexaDrive</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" #menuToggle (click)="toggleMenu()" [class.active]="mobileMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="navbar-menu" [class.open]="mobileMenuOpen">
+        <ul class="nav-primary">
+          <li>
+            <a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">
+              <i class="bi bi-house-door"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <ng-container *ngIf="isLoggedIn">
+            <!-- Customer Navigation -->
+            <li *ngIf="!isInRole('Admin')">
+              <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
+                <i class="bi bi-wrench"></i>
+                <span>Service Requests</span>
+              </a>
+            </li>
+
+            <!-- Admin Navigation -->
+            <li *ngIf="isInRole('Admin')">
+              <a routerLink="/admin/requests" routerLinkActive="active" (click)="closeMenu()">
+                <i class="bi bi-clipboard-data"></i>
+                <span>Manage Requests</span>
+              </a>
+            </li>
+
+            <li>
+              <a routerLink="/notifications" routerLinkActive="active" (click)="closeMenu()">
+                <i class="bi bi-bell"></i>
+                <span>Notifications</span>
+              </a>
+            </li>
+
+            <li *ngIf="isInRole('Admin')">
+              <a routerLink="/admin/analytics" routerLinkActive="active" (click)="closeMenu()">
+                <i class="bi bi-bar-chart"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+          </ng-container>
+
+          <li *ngIf="!isInRole('Admin')">
+            <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+              <i class="bi bi-info-circle"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li *ngIf="!isInRole('Admin')">
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+              <i class="bi bi-envelope"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Auth Section in Mobile Menu -->
+        <div class="nav-auth-mobile" *ngIf="!isLoggedIn">
+          <a routerLink="/signin" class="btn btn-primary-outline" (click)="closeMenu()">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Desktop Auth Section -->
+      <div class="navbar-auth" *ngIf="!isLoggedIn && !isAuthPage()">
+        <a routerLink="/signin" class="btn btn-primary-small">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Sign In</span>
+        </a>
+      </div>
+
+      <!-- User Menu Dropdown -->
+      <div class="navbar-user" *ngIf="isLoggedIn && !isAuthPage()">
+        <button class="user-menu-btn" (click)="toggleUserMenu()">
+          <i class="bi bi-person-circle"></i>
+          <span class="user-text">{{ getCurrentUser() }}</span>
+        </button>
+        <div class="user-dropdown" [class.open]="userMenuOpen">
+          <div class="user-info">
+            <p class="user-email">{{ getCurrentUser() }}</p>
+            <p class="user-role" [class]="getRoleClass()">{{ getUserRole() }}</p>
+          </div>
+          <hr>
+          <button class="logout-btn" (click)="onSignOut()">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,178 @@
+<div class="services-page" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: var(--spacing-lg) 0;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    <!-- Page Header -->
+    <div style="margin-bottom: var(--spacing-lg); text-align: center;">
+      <h1 style="color: var(--color-neutral-900); font-size: 2.5rem; font-weight: bold; margin-bottom: var(--spacing-md);">Request Service</h1>
+      <p style="color: var(--color-neutral-700); font-size: 1.1rem;">Submit a service request for your vehicle</p>
+    </div>
+
+    <!-- Error Alert -->
+    <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show" role="alert" style="margin-bottom: var(--spacing-lg);">
+      <strong>Success:</strong> {{ successMessage }}
+      <button type="button" class="btn-close" (click)="successMessage = null" aria-label="Close"></button>
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-bottom: var(--spacing-lg);">
+      <strong>Error:</strong> {{ errorMessage }}
+      <button type="button" class="btn-close" (click)="errorMessage = null" aria-label="Close"></button>
+    </div>
+
+    <!-- Create Request Form Card -->
+    <div class="card" style="margin-bottom: var(--spacing-lg); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); border: 1px solid #e5e7eb;">
+      <div class="card-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+        <h5 class="mb-0" style="font-weight: bold; font-size: 1.25rem;">Create New Request</h5>
+      </div>
+      <div class="card-body" style="padding: var(--spacing-lg);">
+        <form [formGroup]="form" (ngSubmit)="submitCreate()">
+          <div class="row">
+            <!-- Vehicle Selection -->
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold" style="color: var(--color-neutral-900);">Select Vehicle *</label>
+              <select class="form-control" formControlName="vehicleId" [class.is-invalid]="form.get('vehicleId')?.invalid && form.get('vehicleId')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+                <option value="">Choose a vehicle...</option>
+                <option *ngFor="let v of vehicles" [value]="v.vehicleId">{{ v.model }} - {{ v.numberPlate }} ({{ v.type }})</option>
+              </select>
+              <div class="invalid-feedback d-block" *ngIf="form.get('vehicleId')?.invalid && form.get('vehicleId')?.touched">Please select a vehicle</div>
+              <small class="text-muted d-block mt-sm">Don't see your vehicle? <a href="#" (click)="toggleAddVehicle(); $event.preventDefault()" class="text-primary fw-semibold">Add it now</a></small>
+            </div>
+
+            <!-- Problem Description -->
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold" style="color: var(--color-neutral-900);">Problem Description *</label>
+              <textarea class="form-control" formControlName="problemDescription" rows="4" placeholder="Describe the issue with your vehicle (minimum 10 characters)" [class.is-invalid]="form.get('problemDescription')?.invalid && form.get('problemDescription')?.touched" style="border-radius: var(--radius-md); padding: var(--spacing-md);"></textarea>
+              <div class="invalid-feedback d-block" *ngIf="form.get('problemDescription')?.invalid && form.get('problemDescription')?.touched">Description must be at least 10 characters</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Address -->
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold" style="color: var(--color-neutral-900);">Address *</label>
+              <input type="text" class="form-control" formControlName="serviceAddress" placeholder="Enter service address" [class.is-invalid]="form.get('serviceAddress')?.invalid && form.get('serviceAddress')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+              <div class="invalid-feedback d-block" *ngIf="form.get('serviceAddress')?.invalid && form.get('serviceAddress')?.touched">Address is required</div>
+            </div>
+
+            <!-- Date + Time -->
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold" style="color: var(--color-neutral-900);">Service Date & Time *</label>
+              <input type="datetime-local" class="form-control" formControlName="serviceDate" [class.is-invalid]="form.get('serviceDate')?.invalid && form.get('serviceDate')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+              <div class="invalid-feedback d-block" *ngIf="form.get('serviceDate')?.invalid && form.get('serviceDate')?.touched">Please select a valid future date and time</div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex gap-md" style="margin-top: var(--spacing-lg);">
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid || submitting" style="padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); font-weight: bold;">
+              <span *ngIf="!submitting">Submit Request</span>
+              <span *ngIf="submitting"><span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Submitting...</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)="toggleCreate()" style="padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md);">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Add Vehicle Modal -->
+    <div *ngIf="addingVehicle" class="card" style="margin-bottom: var(--spacing-lg); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); border: 1px solid #e5e7eb;">
+      <div class="card-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none;">
+        <h5 class="mb-0" style="font-weight: bold; font-size: 1.25rem;">Add New Vehicle</h5>
+      </div>
+      <div class="card-body" style="padding: var(--spacing-lg);">
+        <form [formGroup]="vehicleForm" (ngSubmit)="submitAddVehicle()">
+          <div class="row">
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold">Model *</label>
+              <input type="text" class="form-control" formControlName="model" placeholder="e.g., Civic, Fortuner" [class.is-invalid]="vehicleForm.get('model')?.invalid && vehicleForm.get('model')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+              <div class="invalid-feedback d-block" *ngIf="vehicleForm.get('model')?.invalid && vehicleForm.get('model')?.touched">Model is required</div>
+            </div>
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold">Number Plate *</label>
+              <input type="text" class="form-control" formControlName="numberPlate" placeholder="e.g., ABC1234" [class.is-invalid]="vehicleForm.get('numberPlate')?.invalid && vehicleForm.get('numberPlate')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+              <div class="invalid-feedback d-block" *ngIf="vehicleForm.get('numberPlate')?.invalid && vehicleForm.get('numberPlate')?.touched">Number plate is required</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold">Type *</label>
+              <select class="form-control" formControlName="type" [class.is-invalid]="vehicleForm.get('type')?.invalid && vehicleForm.get('type')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+                <option value="">Select type...</option>
+                <option *ngFor="let vType of vehicleTypes" [value]="vType">{{ vType }}</option>
+              </select>
+              <div class="invalid-feedback d-block" *ngIf="vehicleForm.get('type')?.invalid && vehicleForm.get('type')?.touched">Type is required</div>
+            </div>
+            <div class="col-lg-6 mb-lg">
+              <label class="form-label fw-bold">Color *</label>
+              <input type="text" class="form-control" formControlName="color" placeholder="e.g., Red, Blue" [class.is-invalid]="vehicleForm.get('color')?.invalid && vehicleForm.get('color')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+              <div class="invalid-feedback d-block" *ngIf="vehicleForm.get('color')?.invalid && vehicleForm.get('color')?.touched">Color is required</div>
+            </div>
+          </div>
+          <div class="row" *ngIf="vehicleForm.get('type')?.value === 'Other'">
+            <div class="col-lg-12 mb-lg">
+              <label class="form-label fw-bold">Specify Vehicle Type *</label>
+              <input type="text" class="form-control" formControlName="otherType" placeholder="Enter your vehicle type" [class.is-invalid]="vehicleForm.get('otherType')?.invalid && vehicleForm.get('otherType')?.touched" style="border-radius: var(--radius-md); height: 40px;">
+              <div class="invalid-feedback d-block" *ngIf="vehicleForm.get('otherType')?.invalid && vehicleForm.get('otherType')?.touched">Please specify the vehicle type</div>
+            </div>
+          </div>
+          <div class="d-flex gap-md" style="margin-top: var(--spacing-lg);">
+            <button type="submit" class="btn btn-success" [disabled]="!vehicleForm.valid || addingVehicleLoading" style="padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md); font-weight: bold;">
+              <span *ngIf="!addingVehicleLoading">Add Vehicle</span>
+              <span *ngIf="addingVehicleLoading"><span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Adding...</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)="toggleAddVehicle()" style="padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-md);">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="text-center" style="padding: var(--spacing-xl) 0;">
+      <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!loading && requests.length === 0" class="card text-center" style="padding: var(--spacing-xl); border: 2px dashed #e5e7eb;">
+      <p style="color: var(--color-neutral-600); margin-bottom: 0;">No service requests yet. Create one above!</p>
+    </div>
+
+    <!-- Requests List -->
+    <div *ngFor="let r of requests" class="card" style="margin-bottom: var(--spacing-lg); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); border: 1px solid #e5e7eb;">
+      <div class="card-body" style="padding: var(--spacing-lg);">
+        <div class="row align-items-start">
+          <div class="col-md-8">
+            <!-- Request Header -->
+            <div style="margin-bottom: var(--spacing-md);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+                <h5 style="margin: 0; color: var(--color-neutral-900);">{{ r.vehicleModel }}</h5>
+                <span class="badge bg-info" style="padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--radius-sm); font-size: 0.875rem;">{{ formatStatus(r.status) }}</span>
+              </div>
+              <p style="margin: var(--spacing-xs) 0; color: var(--color-neutral-600); font-size: 0.9rem;"><strong>Request ID:</strong> #{{ r.serviceRequestId }}</p>
+            </div>
+
+            <!-- Issue Details -->
+            <div style="background: #f3f4f6; padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+              <p style="margin: var(--spacing-xs) 0; color: var(--color-neutral-900);"><strong>Issue:</strong> {{ r.problemDescription }}</p>
+              <p style="margin: var(--spacing-xs) 0; color: var(--color-neutral-900);"><strong>Location:</strong> {{ r.serviceAddress }}</p>
+              <p style="margin: var(--spacing-xs) 0; color: var(--color-neutral-900);"><strong>Service Date:</strong> {{ r.serviceDateOnly || (r.serviceDate | date: 'yyyy-MM-dd') }}</p>
+              <p style="margin: var(--spacing-xs) 0; color: var(--color-neutral-700); font-size: 0.85rem;"><strong>Created:</strong> {{ r.createdAtDate || (r.createdAt | date: 'yyyy-MM-dd') }}</p>
+            </div>
+
+            <!-- Bill Section -->
+            <div *ngIf="r.bill" style="background: #e0f2f1; padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+              <p style="margin: 0 0 var(--spacing-sm) 0; color: var(--color-neutral-900);"><strong>📄 Bill Generated:</strong> Bill #{{ r.bill.billId }}</p>
+              <a href="#" (click)="downloadBill(r.serviceRequestId); $event.preventDefault()" class="btn btn-sm btn-outline-primary" style="padding: var(--spacing-xs) var(--spacing-md); font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-sm);">⬇ Download Bill PDF</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <!-- Vehicle Info Card -->
+            <div style="background: #f9fafb; padding: var(--spacing-md); border-radius: var(--radius-md); border: 1px solid #e5e7eb;">
+              <h6 style="font-weight: bold; margin-bottom: var(--spacing-sm); color: var(--color-neutral-900);">Vehicle Details</h6>
+              <div style="font-size: 0.9rem; color: var(--color-neutral-700); line-height: 1.6;">
+                <p style="margin: var(--spacing-xs) 0;"><strong>Model:</strong> {{ r.vehicleModel }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

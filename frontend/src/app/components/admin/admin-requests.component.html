@@ -1,0 +1,252 @@
+<div class="container py-3">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Admin — Service Requests</h2>
+    <button class="btn btn-outline-primary" (click)="toggleSearch()">
+      <i class="bi bi-search"></i> {{ showSearch ? 'Hide' : 'Show' }} Filters
+    </button>
+  </div>
+
+  <!-- Search/Filter Form -->
+  <div *ngIf="showSearch" class="card p-3 mb-4 bg-light">
+    <h5 class="mb-3">Search & Filter</h5>
+    <form [formGroup]="searchForm" (ngSubmit)="search()">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Vehicle Type</label>
+          <input type="text" class="form-control" formControlName="vehicleType" placeholder="e.g., Car, Bike">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Number Plate</label>
+          <input type="text" class="form-control" formControlName="plateNumber" placeholder="e.g., TN10AB1234">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Customer Email</label>
+          <input type="email" class="form-control" formControlName="customerEmail" placeholder="customer@example.com">
+        </div>
+      </div>
+      <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Search</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="resetSearch()">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-3 text-muted">Loading requests...</p>
+  </div>
+
+  <!-- No Results -->
+  <div *ngIf="!loading && requests.length === 0" class="alert alert-info">
+    No service requests found.
+  </div>
+
+  <!-- Ongoing Requests Section -->
+  <div *ngIf="!loading && ongoingRequests.length > 0" class="mb-5">
+    <h4 class="mb-3 text-primary">
+      <i class="bi bi-clock-history"></i> Ongoing Requests ({{ ongoingRequests.length }})
+    </h4>
+    <div class="row">
+      <div *ngFor="let r of ongoingRequests" class="col-12 mb-3">
+        <div class="card border-primary">
+          <div class="card-body">
+            <div class="row align-items-start">
+              <!-- Left Column: Request Info -->
+              <div class="col-md-7">
+                <!-- Header: ID and Status -->
+                <div class="mb-3">
+                  <span class="badge bg-dark me-2">Request #{{ r.serviceRequestId }}</span>
+                  <span [ngClass]="'badge ' + getStatusBadgeClass(r.status)">{{ r.status }}</span>
+                </div>
+
+                <!-- Vehicle Info -->
+                <h6 class="mb-2">
+                  <i class="bi bi-car-front"></i>
+                  <strong>{{ r.vehicleModel }}</strong>
+                  <span class="badge bg-light text-dark">{{ r.vehicleType }}</span>
+                </h6>
+                <p class="text-muted small mb-2">
+                  <strong>Plate:</strong> {{ r.vehicleNumberPlate }}
+                </p>
+
+                <div style="margin-top: .5rem; font-size: .9rem; color: var(--color-neutral-700);">
+                  <div><strong>Owner:</strong> {{ r.ownerName || '-' }} ({{ r.ownerEmail || '-' }})</div>
+                  <div><strong>Contact:</strong> {{ r.ownerContact || '-' }}</div>
+                </div>
+
+                <!-- Problem Description -->
+                <div class="mb-2 p-2 bg-light rounded">
+                  <small><strong>Issue:</strong></small>
+                  <p class="mb-0 small">{{ r.problemDescription }}</p>
+                </div>
+
+                <!-- Address -->
+                <p class="small text-muted mb-2">
+                  <strong><i class="bi bi-geo-alt"></i> Address:</strong> {{ r.serviceAddress }}
+                </p>
+
+                <!-- Dates -->
+                <div class="row text-muted small">
+                  <div class="col-sm-6">
+                    <strong>Service Date:</strong> {{ r.serviceDate | date:'yyyy-MM-dd' }}
+                  </div>
+                  <div class="col-sm-6">
+                    <strong>Created:</strong> {{ r.createdAtDate || (r.createdAt | date:'yyyy-MM-dd') }}
+                  </div>
+                  <div class="col-sm-6" *ngIf="r.estimatedDeliveryDate || r.estimatedDeliveryDateOnly">
+                    <strong>ETD:</strong>
+                    <span *ngIf="r.estimatedDeliveryDateOnly">{{ r.estimatedDeliveryDateOnly }}</span>
+                    <span *ngIf="!r.estimatedDeliveryDateOnly">{{ r.estimatedDeliveryDate | date:'yyyy-MM-dd' }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Actions -->
+              <div class="col-md-5">
+                <!-- Status Selector -->
+                <div class="mb-3">
+                  <label class="form-label fw-600 small">Change Status</label>
+                  <select 
+                    class="form-select form-select-sm" 
+                    (change)="changeStatus(r, $any($event.target).value)"
+                    [value]="r.status">
+                    <option value="">Select new status...</option>
+                    <option value="0">Request Created</option>
+                    <option value="1">Service In Progress</option>
+                    <option value="2">Service Completed</option>
+                  </select>
+                </div>
+
+                <!-- Bill Status -->
+                <div *ngIf="r.bill" class="alert alert-success alert-sm mb-2">
+                  <small><i class="bi bi-file-earmark-pdf"></i> Bill Uploaded</small>
+                </div>
+
+                <!-- Bill Upload -->
+                <div class="mb-2">
+                  <label class="form-label small">Upload Bill (PDF)</label>
+                  <input type="file" class="form-control form-control-sm" accept="application/pdf" (change)="onFileSelected($event, r)" 
+                         [disabled]="uploading || showBillConfirm || uploadedRequestIds.has(r.serviceRequestId)">
+                  <button class="btn btn-sm btn-primary mt-2 w-100" (click)="showBillConfirm = true; billConfirmRequest = r" 
+                          [disabled]="!selectedFile || uploading || showBillConfirm || uploadedRequestIds.has(r.serviceRequestId)">
+                    <i class="bi bi-upload"></i> {{ uploading ? 'Uploading...' : 'Upload Bill' }}
+                  </button>
+
+                  <!-- Bill Upload Confirmation Dialog -->
+                  <div *ngIf="showBillConfirm && billConfirmRequest === r" class="modal-backdrop fade show" style="z-index: 1050;"></div>
+                  <div *ngIf="showBillConfirm && billConfirmRequest === r" class="modal d-block" tabindex="-1" style="z-index: 1060; background: rgba(0,0,0,0.2);">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Confirm Bill Upload</h5>
+                        </div>
+                        <div class="modal-body">
+                          <p>Are you sure you want to upload the selected bill PDF for this request?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" (click)="confirmUploadBill()" [disabled]="uploading">Yes</button>
+                          <button class="btn btn-secondary" (click)="cancelUploadBill()" [disabled]="uploading">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Notifications removed as per requirements -->
+
+                <!-- Delete Button -->
+                <button class="btn btn-sm btn-danger w-100 mt-2" (click)="deleteRequest(r)">
+                  <i class="bi bi-trash"></i> Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Completed Requests Section -->
+  <div *ngIf="!loading && completedRequests.length > 0" class="mb-5">
+    <h4 class="mb-3 text-success">
+      <i class="bi bi-check-circle"></i> Completed Requests ({{ completedRequests.length }})
+    </h4>
+    <div class="row">
+      <div *ngFor="let r of completedRequests" class="col-12 mb-3">
+        <div class="card border-success">
+          <div class="card-body">
+            <div class="row align-items-start">
+              <!-- Left Column: Request Info -->
+              <div class="col-md-7">
+                <!-- Header: ID and Status -->
+                <div class="mb-3">
+                  <span class="badge bg-dark me-2">Request #{{ r.serviceRequestId }}</span>
+                  <span [ngClass]="'badge ' + getStatusBadgeClass(r.status)">{{ r.status }}</span>
+                </div>
+
+                <!-- Vehicle Info -->
+                <h6 class="mb-2">
+                  <i class="bi bi-car-front"></i>
+                  <strong>{{ r.vehicleModel }}</strong>
+                  <span class="badge bg-light text-dark">{{ r.vehicleType }}</span>
+                </h6>
+                <p class="text-muted small mb-2">
+                  <strong>Plate:</strong> {{ r.vehicleNumberPlate }}
+                </p>
+
+                <div style="margin-top: .5rem; font-size: .9rem; color: var(--color-neutral-700);">
+                  <div><strong>Owner:</strong> {{ r.ownerName || '-' }} ({{ r.ownerEmail || '-' }})</div>
+                  <div><strong>Contact:</strong> {{ r.ownerContact || '-' }}</div>
+                </div>
+
+                <!-- Problem Description -->
+                <div class="mb-2 p-2 bg-light rounded">
+                  <small><strong>Issue:</strong></small>
+                  <p class="mb-0 small">{{ r.problemDescription }}</p>
+                </div>
+
+                <!-- Address -->
+                <p class="small text-muted mb-2">
+                  <strong><i class="bi bi-geo-alt"></i> Address:</strong> {{ r.serviceAddress }}
+                </p>
+
+                <!-- Dates -->
+                <div class="row text-muted small">
+                  <div class="col-sm-6">
+                    <strong>Service Date:</strong> {{ r.serviceDate | date:'yyyy-MM-dd' }}
+                  </div>
+                  <div class="col-sm-6">
+                    <strong>Created:</strong> {{ r.createdAtDate || (r.createdAt | date:'yyyy-MM-dd') }}
+                  </div>
+                  <div class="col-sm-6" *ngIf="r.estimatedDeliveryDate || r.estimatedDeliveryDateOnly">
+                    <strong>ETD:</strong>
+                    <span *ngIf="r.estimatedDeliveryDateOnly">{{ r.estimatedDeliveryDateOnly }}</span>
+                    <span *ngIf="!r.estimatedDeliveryDateOnly">{{ r.estimatedDeliveryDate | date:'yyyy-MM-dd' }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Actions -->
+              <div class="col-md-5">
+                <!-- Bill Status -->
+                <div *ngIf="r.bill" class="alert alert-success alert-sm mb-2">
+                  <small><i class="bi bi-file-earmark-pdf"></i> Bill Available</small>
+                </div>
+
+                <!-- Notifications removed as per requirements -->
+
+                <!-- Delete Button -->
+                <button class="btn btn-sm btn-danger w-100 mt-2" (click)="deleteRequest(r)">
+                  <i class="bi bi-trash"></i> Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

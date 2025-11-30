@@ -1,0 +1,63 @@
+<div class="card mb-4 form-card">
+<div class="card-header">
+<h5>Add Vehicle</h5>
+</div>
+<div class="card-body">
+<form #createForm="ngForm" (ngSubmit)="onCreateSubmit(createForm)" novalidate>
+ 
+      <div class="form-row">
+<!-- Model -->
+<div class="form-group">
+<label>Model *</label>
+<input name="model" [(ngModel)]="vehicleModel.model" required class="form-control" placeholder="e.g., Honda City, Toyota Fortuner" />
+</div>
+ 
+        <!-- Number Plate -->
+<div class="form-group">
+<label>Number Plate *</label>
+<input name="numberPlate" [(ngModel)]="vehicleModel.numberPlate" required class="form-control" placeholder="e.g., TN10AB1234" />
+</div>
+</div>
+ 
+      <div class="form-row">
+<!-- Type -->
+<div class="form-group">
+<label>Type *</label>
+<select name="type" [(ngModel)]="vehicleModel.type" required class="form-control">
+<option value="" disabled>Select vehicle type</option>
+<option value="Car">Car</option>
+<option value="Bike">Bike</option>
+<option value="SUV">SUV</option>
+<option value="Truck">Truck</option>
+<option value="Van">Van</option>
+</select>
+</div>
+ 
+        <!-- Color -->
+<div class="form-group">
+<label>Color *</label>
+<input name="color" [(ngModel)]="vehicleModel.color" required class="form-control" placeholder="e.g., Silver, Red, Black" />
+</div>
+</div>
+ 
+      <div class="alert alert-info small">
+        <i class="bi bi-info-circle"></i> You are adding this vehicle to your account. It will be automatically linked to your profile.
+      </div>
+ 
+      <!-- Error message -->
+<div *ngIf="createForm.submitted && createForm.invalid" class="alert alert-danger mt-2">
+        Please fill in all required fields correctly.
+</div>
+ 
+      <!-- Buttons -->
+<div class="form-actions mt-3">
+<button type="submit" [disabled]="loading" class="btn btn-primary">
+          {{ loading ? 'Adding...' : 'Add Vehicle' }}
+</button>
+<button type="button" (click)="onCancel()" class="btn btn-secondary">
+          Cancel
+</button>
+</div>
+</form>
+</div>
+</div>

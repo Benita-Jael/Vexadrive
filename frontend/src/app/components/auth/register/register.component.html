@@ -1,0 +1,75 @@
+<div class="register-page">
+  <div class="register-wrapper">
+    <div class="brand">
+      <div class="logo">V</div>
+      <div class="brand-text">
+        <h1>VexaDrive</h1>
+        <p class="muted">Professional vehicle service management</p>
+      </div>
+    </div>
+
+    <div class="card form-card animate-slide-in-up">
+      <div class="card-body">
+        <h2 class="card-title">Create your account</h2>
+        <p class="muted">Register as a customer to request and track services</p>
+
+        <div *ngIf="registerSuccess" class="alert alert-success">
+          <strong>Success:</strong> {{ registerSuccess }}
+        </div>
+
+        <div *ngIf="registerError" class="alert alert-error">
+          <strong>Error:</strong> {{ registerError }}
+        </div>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="form-grid">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" formControlName="name" class="form-control" placeholder="Jane Doe" [class.invalid]="isFieldInvalid('name')" />
+            <small *ngIf="isFieldInvalid('name')" class="field-error">{{ getFieldError('name') }}</small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email" class="form-control" placeholder="you@company.com" [class.invalid]="isFieldInvalid('email')" />
+            <small *ngIf="isFieldInvalid('email')" class="field-error">{{ getFieldError('email') }}</small>
+          </div>
+
+          <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input id="contactNumber" type="text" formControlName="contactNumber" class="form-control" placeholder="e.g., +1 555 555 5555" [class.invalid]="isFieldInvalid('contactNumber')" />
+            <small *ngIf="isFieldInvalid('contactNumber')" class="field-error">Please enter a valid contact number</small>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" [type]="showPassword ? 'text' : 'password'" formControlName="password" class="form-control" placeholder="Minimum 6 characters" [class.invalid]="isFieldInvalid('password')" />
+            <small *ngIf="isFieldInvalid('password')" class="field-error">{{ getFieldError('password') }}</small>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword" class="form-control" placeholder="Re-enter password" [class.invalid]="isFieldInvalid('confirmPassword')" />
+            <small *ngIf="isFieldInvalid('confirmPassword')" class="field-error">{{ getFieldError('confirmPassword') }}</small>
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox-label"><input type="checkbox" (change)="showPassword = !showPassword" /> Show password</label>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid || registerLoading">
+              <span *ngIf="!registerLoading">Create account</span>
+              <span *ngIf="registerLoading">Creating...</span>
+            </button>
+          </div>
+        </form>
+
+        <p class="terms muted">By creating an account you agree to our <a href="/about">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+      </div>
+
+      <div class="card-footer">
+        <p class="muted">Already have an account? <a href="/signin">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
